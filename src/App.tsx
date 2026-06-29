@@ -46,8 +46,8 @@ function App() {
       
       if (data && data.trust) {
         setResult({
-          score: data.trust.trust_score_out_of_100 || 0,
-          decision: data.trust.final_decision || 'unknown'
+          score: data.trust.trust_score !== undefined ? data.trust.trust_score : 0,
+          decision: data.trust.decision || 'unknown'
         });
       } else {
         throw new Error('Invalid response format from server.');

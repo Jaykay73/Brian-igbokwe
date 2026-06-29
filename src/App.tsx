@@ -24,6 +24,8 @@ function App() {
 
     const formData = new FormData();
     formData.append('file', selectedFile);
+    formData.append('user_email', 'demo@bitcheck.com'); // Required by the backend
+    
     // Since we only want the trust score for the frontend, we can optionally 
     // tell the backend not to run heavy explainability/forensics if supported,
     // but the backend uses default values. We'll just let it run.
